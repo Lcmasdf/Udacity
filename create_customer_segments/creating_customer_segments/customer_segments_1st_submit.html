@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 检查你的Python版本</span>
@@ -11820,7 +11820,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 引入这个项目需要的库</span>
@@ -11876,7 +11876,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 显示数据集的一个描述</span>
@@ -12019,7 +12019,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：从数据集中选择三个你希望抽样的数据点的索引</span>
@@ -12138,9 +12138,9 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
 <ul>
-<li>0 代表咖啡馆  其采购的Milk超过了统计数据中75%的值，而Grocery也超过了均值。这与咖啡馆需要大量牛奶以及提供各种各样零食相符</li>
-<li>1 代表零售商  其采购的Grocery和Frozen超过了统计数据中75%的值。与零售商相符</li>
-<li>2 代表超市   其采购的各项物品均处于统计数据中均值附近或高于均值。与综合性的大超市相符。</li>
+<li>0 代表咖啡馆  因为他花费较多在肉和奶上，用来做咖啡与牛排</li>
+<li>1 代表零售商  有大量的杂货和冷冻物品</li>
+<li>2 代表超市   各种的类型的产品都很多，较综合</li>
 </ul>
 
 </div>
@@ -12167,7 +12167,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -12226,7 +12226,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong>
 我尝试了Milk，预测得分-0.248，说明这特征与其他属性是相互独立的，对于区分用户消费习惯是必要的。</p>
-<p>同时因为好奇我尝试了所有的特征，在此预测Grocery与Detergents_Paper是非必要特征。因为两者R^2得分为正数，表示这两个特这可以通过其他特征进行拟合，并不是独立的，所以为非必要特征。</p>
+<p>同时因为好奇我尝试了所有的特征，在此预测Grocery与Detergents_Paper是非必要特征</p>
 <table>
 <thead><tr>
 <th style="text-align:center">feature</th>
@@ -12275,7 +12275,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于数据中的每一对特征构造一个散布矩阵</span>
@@ -14068,7 +14068,7 @@ IKSJ6m9n+AAAAABJRU5ErkJggg==
 <p><strong>回答:</strong>
 Milk与Grocery、Grocery与Detergents_Paper之间存在相关性。</p>
 <p>这实验结果与之前预测结果部分一致，即Grocery与Detergens_Paper是存在相关性，但是Milk与Grocery有相关性这一点与之前预测不符合</p>
-<p>绝大多数数据点都分布在前25的区间内，这些数据都不是正态分布。</p>
+<p>这些数据均符合正态分布</p>
 
 </div>
 </div>
@@ -18305,7 +18305,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">outlier_apperance_count</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">441</span>
@@ -19151,7 +19151,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：通过在good_data上使用PCA，将其转换成和当前特征数一样多的维度</span>
@@ -19516,10 +19516,11 @@ QmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong>前两个主成分总共表示了0.7068的方差，前四个总共表示了0.9311的方差。</p>
 <ul>
-<li>prime 1 代表餐馆      此特征中Fresh和Frozen正权重较高，Detergents_Paper负权重高，可以解释为一家不卖Detergents_Paper但是卖Fresh和Frozen的店</li>
-<li>prime 2 代表杂货铺     此特征中Fresh负权重最高，Frozen与Delicatessen负权重也很高，可以解释为一家不卖Fresh、Frozen和Delicatessen的店</li>
-<li>prime 3 代表熟食铺     此特征中Delicatessen正权重高，Fresh负权重高，可以解释为一家卖Delicastessen但是不卖Fresh的店</li>
-<li>prime 4 代表冷鲜市场   此特征中Frozen正权重高，Delicaessen负权重高，可以解释为一家卖Frozen但是不卖Delicatessen的店</li>
+<li>prime 1 代表餐馆</li>
+<li>prime 2 代表杂货铺</li>
+<li>prime 3 代表熟食铺</li>
+<li>prime 4 代表冷鲜市场
+ps：上述猜测较难。。</li>
 </ul>
 
 </div>
@@ -19536,7 +19537,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过PCA转换的sample log-data</span>
@@ -19640,7 +19641,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：通过在good data上进行PCA，将其转换成两个维度</span>
@@ -19672,7 +19673,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 展示经过两个维度的PCA转换之后的样本log-data</span>
@@ -19755,7 +19756,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -19772,13 +19773,13 @@ QmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x12d9e6d8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x112afcc0&gt;</pre>
 </div>
 
 </div>
@@ -20884,7 +20885,7 @@ HRERERERkQ9jUkdEREREROTDmNQRERERERH5MCZ1REREREREPoxJHRERERERkQ9jUkdEREREROTD
 <p><strong>回答:</strong>
 K-Means聚类算法优点是计算复杂度低，速度计算速度快</p>
 <p>高斯混合模型聚类算法优点是能够给出该点所属类别的概率</p>
-<p>我选用高斯混合模型聚类算法，因为这里闵可夫斯基距离不太适用于此处的分类，概率密度更加适合</p>
+<p>我选用高斯混合模型聚类算法，这里的数据符合高斯分布，而且使用距离进行分类并不适合这里的情景</p>
 
 </div>
 </div>
@@ -20911,7 +20912,7 @@ K-Means聚类算法优点是计算复杂度低，速度计算速度快</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：在降维后的数据上使用你选择的聚类算法</span>
@@ -21015,7 +21016,7 @@ K-Means聚类算法优点是计算复杂度低，速度计算速度快</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 从已有的实现中展示聚类的结果</span>
@@ -21683,7 +21684,7 @@ NguLAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：反向转换中心点</span>
@@ -21785,8 +21786,8 @@ NguLAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong>
-Segment 0 表示零售商  Segment 0 特征中Milk、Grocery与Deergents_Paper均超过了75%的统计数据</p>
-<p>Segment 1 表示餐馆 Segment 1 特征中Fresh、Frozen、Delicatessen均在统计数据平均值附近，Segment表示特征不明显（感觉是个多种类型的集合），暂且预测为餐馆。</p>
+Segment 0 表示咖啡馆</p>
+<p>Segment 1 表示零售商</p>
 
 </div>
 </div>
@@ -21803,7 +21804,7 @@ Segment 0 表示零售商  Segment 0 特征中Milk、Grocery与Deergents_Paper�
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 显示预测结果</span>
@@ -21842,11 +21843,7 @@ Sample point 2 predicted to be in Cluster 0
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong>
 分类0能够最好表示样本点</p>
-<p>之前对样本的预测与现在的结果不相符，我认为原因主要有一下两点：</p>
-<ol>
-<li>之前的预测将样本分为4-5类，而聚类的结果显示样本在只分两类的情况下分类效果好，所以由于分类数目不同会出现较大偏差</li>
-<li>之前受预计分类结果的影响，对样本的选择有一定偏差</li>
-</ol>
+<p>跟我的预测差距很大，心中一万只草泥马奔腾而过</p>
 
 </div>
 </div>
@@ -21892,7 +21889,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
@@ -21965,7 +21962,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 根据‘Channel‘数据显示聚类的结果</span>
