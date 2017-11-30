@@ -128,6 +128,7 @@ class Environment(object):
         start_heading = random.choice(self.valid_headings)
         distance = self.compute_dist(start, destination)
         deadline = distance * 5 # 5 time steps per intersection away
+        #deadline = distance * 10
         if(self.verbose == True): # Debugging
             print "Environment.reset(): Trial set up with start = {}, destination = {}, deadline = {}".format(start, destination, deadline)
 
