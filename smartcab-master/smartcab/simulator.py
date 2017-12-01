@@ -108,7 +108,7 @@ class Simulator(object):
             self.log_writer = csv.DictWriter(self.log_file, fieldnames=self.log_fields)
             self.log_writer.writeheader()
 
-    def run(self, tolerance=0.05, n_test=0):
+    def run(self, tolerance=0.1, n_test=0):
         """ Run a simulation of the environment. 
 
         'tolerance' is the minimum epsilon necessary to begin testing (if enabled)
@@ -154,7 +154,7 @@ class Simulator(object):
             print "\-------------------------"
             print 
 
-            self.env.reset(testing)
+            self.env.reset(testing, total_trials)
             self.current_time = 0.0
             self.last_updated = 0.0
             self.start_time = time.time()
@@ -182,13 +182,14 @@ class Simulator(object):
                         self.env.step()
                         self.last_updated = self.current_time
                     
-                    # Render text
-                    self.render_text(trial, testing)
+                        # Render text
+                        if testing:
+                            self.render_text(trial, testing)
 
-                    # Render GUI and sleep
-                    if self.display:
-                        self.render(trial, testing)
-                        self.pygame.time.wait(self.frame_delay)
+                        # Render GUI and sleep
+                        #if self.display:
+                            #self.render(trial, testing)
+                            #self.pygame.time.wait(self.frame_delay)
 
                 except KeyboardInterrupt:
                     self.quit = True
