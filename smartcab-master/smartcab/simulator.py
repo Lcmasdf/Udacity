@@ -10,6 +10,7 @@ import time
 import random
 import importlib
 import csv
+import matplotlib.pyplot as plt
 
 class Simulator(object):
     """Simulates agents in a dynamic smartcab environment.
@@ -185,6 +186,7 @@ class Simulator(object):
                         # Render text
                         if testing:
                             self.render_text(trial, testing)
+                            #self.Q_info()
 
                         # Render GUI and sleep
                         #if self.display:
@@ -462,3 +464,40 @@ class Simulator(object):
             self.pygame.time.wait(self.frame_delay)
         self.screen.blit(self.font.render(pause_text, True, self.bg_color, self.bg_color), (400, self.height - 30))
         self.start_time += (time.time() - abs_pause_time)
+
+    def Q_info(self):
+        '''
+        print len(self.env.primary_agent.Q_cnt)
+        min_Q_cnt = 999999
+        max_Q_cnt = 0
+        for key in self.env.primary_agent.Q_cnt:
+            if min_Q_cnt > self.env.primary_agent.Q_cnt[key]:
+                min_Q_cnt = self.env.primary_agent.Q_cnt[key]
+
+            if max_Q_cnt < self.env.primary_agent.Q_cnt[key]:
+                max_Q_cnt = self.env.primary_agent.Q_cnt[key]
+
+        print 'Min:',min_Q_cnt, 'Max:', max_Q_cnt
+        '''
+        Q_cnt_dict = dict()
+        ten_plus_cnt = 0
+        total_cnt = 0
+        for key, value in self.env.primary_agent.Q_cnt.iteritems():
+            if value not in Q_cnt_dict:
+                Q_cnt_dict[value] = 1
+            else:
+                Q_cnt_dict[value] += 1
+
+            total_cnt += value
+
+            if value > 5:
+                ten_plus_cnt += value
+                print key, '-', value
+
+        x = Q_cnt_dict.keys()
+        y = Q_cnt_dict.values()
+
+        print 'total_cnt:', total_cnt, 'ten_plus_cnt:', ten_plus_cnt
+
+        plt.bar(x, y)
+        plt.show()
