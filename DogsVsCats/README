@@ -1,0 +1,31 @@
+﻿项目运行需求：
+
+
+python 3.x
+keras 2.1.3
+tensflow 1.4.1
+cuda 8.0.61
+NVIDIA_SMI 390.12
+
+或以tensoflow为后端可运行keras2.1.3的环境
+
+
+文件描述：
+DataClean.ipynb  数据清理实现内容
+DataDesc.ipynb   数据集观察
+DrawModelAndCalTime.ipynb  使用keras画最重模型图以及计算模型运行时间
+TrainAndImprove.ipynb  训练模型以及判断clip和数据清理是否会带来提升
+data_clean.py    数据清理所用方法实现
+feature_extract.py   特征提取具体实现
+generator.py  为Keras.ImageDataGenerator.flow_from_directory()创建相应目录环境
+
+
+运行顺序：
+
+首先将训练集解压到./train ,测试集解压到./test，再运行DataClean.ipynb清理数据同时创建train_data, test_data，
+剩余ipynb文件没有顺序要求。
+
+运行时间：
+
+大概半小时左右
+电脑配置 i5 8400 ， 24GB内存， GTX 1066
